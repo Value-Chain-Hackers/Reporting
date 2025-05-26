@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.23">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Christiaan Verhoef">
+<meta name="dcterms.date" content="2025-05-26">
+
+<title>Mini Report: AI Lab Infrastructure &amp; Strategy</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="Reportmay19-24_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Reportmay19-24_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="Reportmay19-24_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="Reportmay19-24_files/libs/quarto-html/popper.min.js"></script>
+<script src="Reportmay19-24_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Reportmay19-24_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Reportmay19-24_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Reportmay19-24_files/libs/quarto-html/quarto-syntax-highlighting-226bd0f977fa82dfae4534cac220d79a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Reportmay19-24_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Reportmay19-24_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Reportmay19-24_files/libs/bootstrap/bootstrap-2123b54c9d9186f025b29cd6c174ee24.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#executive-summary" id="toc-executive-summary" class="nav-link active" data-scroll-target="#executive-summary"><span class="header-section-number">1</span> 🧭 Executive Summary</a>
+  <ul class="collapse">
+  <li><a href="#weekly-commitment-roles" id="toc-weekly-commitment-roles" class="nav-link" data-scroll-target="#weekly-commitment-roles"><span class="header-section-number">1.0.1</span> Weekly Commitment &amp; Roles</a></li>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives"><span class="header-section-number">1.0.2</span> Objectives</a></li>
+  <li><a href="#key-initiatives-underway" id="toc-key-initiatives-underway" class="nav-link" data-scroll-target="#key-initiatives-underway"><span class="header-section-number">1.0.3</span> Key Initiatives Underway</a></li>
+  </ul></li>
+  <li><a href="#identified-problems" id="toc-identified-problems" class="nav-link" data-scroll-target="#identified-problems"><span class="header-section-number">2</span> 🔍 Identified Problems</a></li>
+  <li><a href="#solutions-in-progress" id="toc-solutions-in-progress" class="nav-link" data-scroll-target="#solutions-in-progress"><span class="header-section-number">3</span> ✅ Solutions in Progress</a>
+  <ul class="collapse">
+  <li><a href="#practical-guidelines" id="toc-practical-guidelines" class="nav-link" data-scroll-target="#practical-guidelines"><span class="header-section-number">3.1</span> 1. Practical Guidelines</a></li>
+  <li><a href="#ownership-autonomy" id="toc-ownership-autonomy" class="nav-link" data-scroll-target="#ownership-autonomy"><span class="header-section-number">3.2</span> 2. Ownership &amp; Autonomy</a></li>
+  <li><a href="#shared-infrastructure" id="toc-shared-infrastructure" class="nav-link" data-scroll-target="#shared-infrastructure"><span class="header-section-number">3.3</span> 3. Shared Infrastructure</a></li>
+  </ul></li>
+  <li><a href="#what-works-already" id="toc-what-works-already" class="nav-link" data-scroll-target="#what-works-already"><span class="header-section-number">4</span> 🔧 What Works Already</a></li>
+  <li><a href="#field-notes" id="toc-field-notes" class="nav-link" data-scroll-target="#field-notes"><span class="header-section-number">5</span> ✍️ Field Notes</a>
+  <ul class="collapse">
+  <li><a href="#mira-local-deployment-case" id="toc-mira-local-deployment-case" class="nav-link" data-scroll-target="#mira-local-deployment-case"><span class="header-section-number">5.1</span> Mira – Local Deployment Case</a>
+  <ul class="collapse">
+  <li><a href="#solution-pivot-to-msty-minimal-stack-toolkit-for-you" id="toc-solution-pivot-to-msty-minimal-stack-toolkit-for-you" class="nav-link" data-scroll-target="#solution-pivot-to-msty-minimal-stack-toolkit-for-you"><span class="header-section-number">5.1.1</span> Solution: Pivot to MSTY (Minimal Stack Toolkit for You)</a></li>
+  <li><a href="#takeaway" id="toc-takeaway" class="nav-link" data-scroll-target="#takeaway"><span class="header-section-number">5.1.2</span> Takeaway</a></li>
+  </ul></li>
+  <li><a href="#beer-game-curriculum-integration" id="toc-beer-game-curriculum-integration" class="nav-link" data-scroll-target="#beer-game-curriculum-integration"><span class="header-section-number">5.2</span> Beer Game – Curriculum Integration</a>
+  <ul class="collapse">
+  <li><a href="#repository" id="toc-repository" class="nav-link" data-scroll-target="#repository"><span class="header-section-number">5.2.1</span> Repository</a></li>
+  <li><a href="#outcome" id="toc-outcome" class="nav-link" data-scroll-target="#outcome"><span class="header-section-number">5.2.2</span> Outcome</a></li>
+  <li><a href="#participants" id="toc-participants" class="nav-link" data-scroll-target="#participants"><span class="header-section-number">5.2.3</span> Participants</a></li>
+  </ul></li>
+  <li><a href="#bi-dashboard-ronald-digital-team-study" id="toc-bi-dashboard-ronald-digital-team-study" class="nav-link" data-scroll-target="#bi-dashboard-ronald-digital-team-study"><span class="header-section-number">5.3</span> BI Dashboard – Ronald &amp; Digital Team Study</a>
+  <ul class="collapse">
+  <li><a href="#goals" id="toc-goals" class="nav-link" data-scroll-target="#goals"><span class="header-section-number">5.3.1</span> Goals</a></li>
+  <li><a href="#progress" id="toc-progress" class="nav-link" data-scroll-target="#progress"><span class="header-section-number">5.3.2</span> Progress</a></li>
+  <li><a href="#relevance" id="toc-relevance" class="nav-link" data-scroll-target="#relevance"><span class="header-section-number">5.3.3</span> Relevance</a></li>
+  </ul></li>
+  <li><a href="#formalized-role-next-steps" id="toc-formalized-role-next-steps" class="nav-link" data-scroll-target="#formalized-role-next-steps"><span class="header-section-number">5.4</span> 🧩 Formalized Role &amp; Next Steps</a>
+  <ul class="collapse">
+  <li><a href="#dayweek-value-chain-hackers" id="toc-dayweek-value-chain-hackers" class="nav-link" data-scroll-target="#dayweek-value-chain-hackers"><span class="header-section-number">5.4.1</span> 1 day/week – Value Chain Hackers</a></li>
+  <li><a href="#daysweek-lectorate-wide-support" id="toc-daysweek-lectorate-wide-support" class="nav-link" data-scroll-target="#daysweek-lectorate-wide-support"><span class="header-section-number">5.4.2</span> 2 days/week – Lectorate-wide Support</a></li>
+  <li><a href="#underlying-goal" id="toc-underlying-goal" class="nav-link" data-scroll-target="#underlying-goal"><span class="header-section-number">5.4.3</span> Underlying Goal</a></li>
+  </ul></li>
+  <li><a href="#upcoming-initiative-digitaliseringsscan" id="toc-upcoming-initiative-digitaliseringsscan" class="nav-link" data-scroll-target="#upcoming-initiative-digitaliseringsscan"><span class="header-section-number">5.5</span> Upcoming Initiative: “Digitaliseringsscan”</a>
+  <ul class="collapse">
+  <li><a href="#objectives-1" id="toc-objectives-1" class="nav-link" data-scroll-target="#objectives-1"><span class="header-section-number">5.5.1</span> Objectives:</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#preconditions-for-success" id="toc-preconditions-for-success" class="nav-link" data-scroll-target="#preconditions-for-success"><span class="header-section-number">6</span> 📌 Preconditions for Success</a></li>
+  <li><a href="#closing-thought" id="toc-closing-thought" class="nav-link" data-scroll-target="#closing-thought"><span class="header-section-number">7</span> 💬 Closing Thought</a></li>
+  <li><a href="#nuttige-ai-usecases-voor-onderzoek" id="toc-nuttige-ai-usecases-voor-onderzoek" class="nav-link" data-scroll-target="#nuttige-ai-usecases-voor-onderzoek"><span class="header-section-number">8</span> 🤖 Nuttige AI-Usecases voor Onderzoek</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Reportmay19-24.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Mini Report: AI Lab Infrastructure &amp; Strategy</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Christiaan Verhoef </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 26, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="executive-summary" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> 🧭 Executive Summary</h1>
+<p>This mini report outlines the formalized scope and direction of AI and digital adoption efforts at Windesheim, coordinated by Christiaan Verhoef. It reflects recent strategic conversations with Michiel Steeman and Harrold van den Nieuwboer, and integrates operational updates such as AI stack deployments, dashboard development, and the launch of a lectorate-wide digitization scan.</p>
+<section id="weekly-commitment-roles" class="level3" data-number="1.0.1">
+<h3 data-number="1.0.1" class="anchored" data-anchor-id="weekly-commitment-roles"><span class="header-section-number">1.0.1</span> Weekly Commitment &amp; Roles</h3>
+<ul>
+<li><p><strong>1 day/week – VCH (Value Chain Hackers)</strong><br>
+As <em>Technisch Facilitator AI &amp; Data</em>: Maintain and expand local AI stack, support data and tooling infrastructure.</p></li>
+<li><p><strong>2 days/week – Lectoraat-wide</strong><br>
+As <em>Digital Adoption Specialist</em>: Guide colleagues in the effective use of AI and ICT tools to enhance education and research.</p></li>
+</ul>
+</section>
+<section id="objectives" class="level3" data-number="1.0.2">
+<h3 data-number="1.0.2" class="anchored" data-anchor-id="objectives"><span class="header-section-number">1.0.2</span> Objectives</h3>
+<ul>
+<li>Enable scalable, secure, and local-first AI usage</li>
+<li>Provide reproducible tools and templates for staff and students</li>
+<li>Make technology a <strong>lever</strong>, not a <strong>barrier</strong></li>
+<li>Facilitate—not impose—AI use, aligned with actual needs</li>
+</ul>
+</section>
+<section id="key-initiatives-underway" class="level3" data-number="1.0.3">
+<h3 data-number="1.0.3" class="anchored" data-anchor-id="key-initiatives-underway"><span class="header-section-number">1.0.3</span> Key Initiatives Underway</h3>
+<ul>
+<li>✅ <strong>AI Workbook &amp; Infrastructure</strong>: Deployment of tools like OpenWebUI, pgvector, n8n<br>
+</li>
+<li>✅ <strong>Field Implementation</strong>: Lightweight stack (MSTY) deployed with students<br>
+</li>
+<li>✅ <strong>BI Dashboard (Ronald)</strong>: Live survey analytics pipeline on GitHub Pages<br>
+</li>
+<li>🔜 <strong>Beergame Revival</strong>: Preparing for re-integration into the minor Process Optimization<br>
+</li>
+<li>🔜 <strong>Digitaliseringsscan</strong>: Lectorate-wide interviews and tool matching to map opportunities &amp; bottlenecks</li>
+</ul>
+<p>This effort positions Windesheim to lead in practical AI adoption, grounded in day-to-day educator workflows, and backed by accessible open-source infrastructure.</p>
+<hr>
+</section>
+</section>
+<section id="identified-problems" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> 🔍 Identified Problems</h1>
+<ul>
+<li><p><strong>No clear guidelines</strong><br>
+Students and researchers use AI tools, but lack responsible instructions or use-cases.</p></li>
+<li><p><strong>Oversold tools and hype</strong><br>
+Many tools are in a “hype” phase and are not realistically applicable yet.</p></li>
+<li><p><strong>Lack of ownership</strong><br>
+No single point of coordination across departments for practical AI integration.</p></li>
+<li><p><strong>Fragmented infrastructure</strong><br>
+Tools, datasets, and environments are scattered or impractical to use (e.g., Azure, CoPilot).</p></li>
+</ul>
+<blockquote class="blockquote">
+<p>“AI is not good or bad — it depends on what people do with it.”</p>
+</blockquote>
+<hr>
+</section>
+<section id="solutions-in-progress" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> ✅ Solutions in Progress</h1>
+<section id="practical-guidelines" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="practical-guidelines"><span class="header-section-number">3.1</span> 1. Practical Guidelines</h2>
+<ul>
+<li>Creation of an <strong>AI Workbook</strong>, expanding:
+<ul>
+<li><a href="https://mlr3book.mlr-org.com/">mlr3book</a></li>
+<li>The Big Prompt Library</li>
+<li><a href="https://course.fast.ai/">fast.ai course</a></li>
+</ul></li>
+<li>Distributed under a <strong>CC BY-NC-SA 4.0 license</strong></li>
+</ul>
+</section>
+<section id="ownership-autonomy" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="ownership-autonomy"><span class="header-section-number">3.2</span> 2. Ownership &amp; Autonomy</h2>
+<ul>
+<li>Safe, GDPR-compliant environments for experimentation</li>
+<li>Locally integrated AI stack:<br>
+<code>OpenWebUI + Supabase + Qdrant + pgvector + n8n</code></li>
+</ul>
+</section>
+<section id="shared-infrastructure" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="shared-infrastructure"><span class="header-section-number">3.3</span> 3. Shared Infrastructure</h2>
+<ul>
+<li>Public repositories:
+<ul>
+<li><a href="https://github.com/Value-Chain-Hackers/VCH-Infra">VCH-Infra</a></li>
+<li><a href="https://github.com/Value-Chain-Hackers/VCH-Datasharing">VCH-Datasharing</a></li>
+</ul></li>
+<li>Student usage: prompt testing, data exploration, document analysis</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="what-works-already" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> 🔧 What Works Already</h1>
+<ul>
+<li><strong>Obsidian Integration</strong> with local LLMs for semantic search</li>
+<li><strong>Workshops held</strong> on prompt engineering and local AI use</li>
+<li><strong>Use cases</strong> tested: ESG reporting, data pipelines, Jupyter-based model interaction</li>
+<li><strong>Templates</strong> being developed for reproducible AI projects</li>
+</ul>
+<hr>
+</section>
+<section id="field-notes" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> ✍️ Field Notes</h1>
+<section id="mira-local-deployment-case" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="mira-local-deployment-case"><span class="header-section-number">5.1</span> Mira – Local Deployment Case</h2>
+<p>Mira attempted to run the full AI stack on her machine, but it was limited by hardware:</p>
+<ul>
+<li><strong>Specs</strong>: 8GB RAM with ~6.7GB already in use</li>
+<li><strong>Outcome</strong>: Full stack was impractical</li>
+</ul>
+<section id="solution-pivot-to-msty-minimal-stack-toolkit-for-you" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="solution-pivot-to-msty-minimal-stack-toolkit-for-you"><span class="header-section-number">5.1.1</span> Solution: Pivot to MSTY (Minimal Stack Toolkit for You)</h3>
+<ul>
+<li>✅ Small local models ran successfully<br>
+</li>
+<li>✅ Prompt workflows loaded and usable<br>
+</li>
+<li>✅ Performance stable for experimentation</li>
+</ul>
+</section>
+<section id="takeaway" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="takeaway"><span class="header-section-number">5.1.2</span> Takeaway</h3>
+<p>MSTY proves valuable for underpowered machines and increases accessibility to AI tools across students.</p>
+<hr>
+</section>
+</section>
+<section id="beer-game-curriculum-integration" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="beer-game-curriculum-integration"><span class="header-section-number">5.2</span> Beer Game – Curriculum Integration</h2>
+<p>Spoke with <strong>Harrold van den Nieuwboer</strong> about reviving the Beer Game as part of the <em>Process Optimization</em> minor.</p>
+<ul>
+<li>Michiel is aware of the project from earlier implementation</li>
+<li>Harrold raised it again during Ruud Wijlhuizen’s farewell</li>
+<li>Goal: <strong>structural integration</strong> in the minor</li>
+</ul>
+<section id="repository" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="repository"><span class="header-section-number">5.2.1</span> Repository</h3>
+<p><a href="https://github.com/Hogeschool-Windesheim/blockchain-demonstrator-serious-game">blockchain-demonstrator-serious-game</a></p>
+</section>
+<section id="outcome" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="outcome"><span class="header-section-number">5.2.2</span> Outcome</h3>
+<ul>
+<li>Meeting planned in <strong>2 weeks</strong></li>
+<li>Christiaan will try to <strong>reactivate and test</strong> the game instance before then</li>
+</ul>
+</section>
+<section id="participants" class="level3" data-number="5.2.3">
+<h3 data-number="5.2.3" class="anchored" data-anchor-id="participants"><span class="header-section-number">5.2.3</span> Participants</h3>
+<ul>
+<li>Harrold van den Nieuwboer<br>
+</li>
+<li>Christiaan Verhoef<br>
+</li>
+<li>Maxime Bouillon<br>
+</li>
+<li>+3 additional team members</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="bi-dashboard-ronald-digital-team-study" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="bi-dashboard-ronald-digital-team-study"><span class="header-section-number">5.3</span> BI Dashboard – Ronald &amp; Digital Team Study</h2>
+<p>Over the weekend, work progressed on setting up an <strong>automated dashboard</strong> for Ronald de Boer, supporting the ongoing <strong>survey data workflow</strong> for the Windesheim team.</p>
+<section id="goals" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="goals"><span class="header-section-number">5.3.1</span> Goals</h3>
+<ul>
+<li>Provide Ronald with an easy-to-update interface for survey insights</li>
+<li>Demonstrate how automation and reporting can <strong>digitally augment team operations</strong></li>
+<li>Contribute to the <strong>ongoing study</strong> into digital tooling for lecturers and coordinators</li>
+</ul>
+</section>
+<section id="progress" class="level3" data-number="5.3.2">
+<h3 data-number="5.3.2" class="anchored" data-anchor-id="progress"><span class="header-section-number">5.3.2</span> Progress</h3>
+<ul>
+<li>Deployed prototype dashboard at:<br>
+🔗 <a href="https://value-chain-hackers.github.io/Bi-Ronald/">value-chain-hackers.github.io/Bi-Ronald</a></li>
+<li>Quarto + GitHub Pages used for live publication</li>
+<li>R-based pipeline with future hooks for Supabase and n8n integration</li>
+</ul>
+</section>
+<section id="relevance" class="level3" data-number="5.3.3">
+<h3 data-number="5.3.3" class="anchored" data-anchor-id="relevance"><span class="header-section-number">5.3.3</span> Relevance</h3>
+<p>This effort aligns directly with: - The goal of <strong>digitizing lecturer workflows</strong> - Demonstrating <strong>low-cost automation</strong> in practice - Building a practical case for scalable, repeatable tech in the lectorate</p>
+<hr>
+</section>
+</section>
+<section id="formalized-role-next-steps" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="formalized-role-next-steps"><span class="header-section-number">5.4</span> 🧩 Formalized Role &amp; Next Steps</h2>
+<p>Following internal discussions, the following <strong>working agreement</strong> has been established:</p>
+<section id="dayweek-value-chain-hackers" class="level3" data-number="5.4.1">
+<h3 data-number="5.4.1" class="anchored" data-anchor-id="dayweek-value-chain-hackers"><span class="header-section-number">5.4.1</span> 1 day/week – Value Chain Hackers</h3>
+<p><strong>Role</strong>: <em>Technisch Facilitator AI &amp; Data</em><br>
+<strong>Focus</strong>: Infrastructure &amp; Enablement<br>
+- Maintain and expand the local AI stack<br>
+- Make tools like OpenWebUI, pgvector, etc. available<br>
+- Enable dashboarding, data access, and GPT integrations<br>
+- Assist in AI application development and research methodology adoption</p>
+</section>
+<section id="daysweek-lectorate-wide-support" class="level3" data-number="5.4.2">
+<h3 data-number="5.4.2" class="anchored" data-anchor-id="daysweek-lectorate-wide-support"><span class="header-section-number">5.4.2</span> 2 days/week – Lectorate-wide Support</h3>
+<p><strong>Role</strong>: <em>Digital Adoption Specialist</em><br>
+<strong>Focus</strong>: Empowering staff with AI &amp; digital tools<br>
+- Support colleagues in AI integration and use of ICT tools<br>
+- Help with: - Faster interview analysis<br>
+- Dashboard/report generation<br>
+- Classroom AI applications<br>
+- Research support<br>
+- Co-creation of lesson content, formats, and examples</p>
+</section>
+<section id="underlying-goal" class="level3" data-number="5.4.3">
+<h3 data-number="5.4.3" class="anchored" data-anchor-id="underlying-goal"><span class="header-section-number">5.4.3</span> Underlying Goal</h3>
+<blockquote class="blockquote">
+<p>“Not to invent things for them, but to facilitate.”<br>
+“To help them achieve more with less effort.”<br>
+“To ensure that technology becomes a lever, not a barrier.”</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="upcoming-initiative-digitaliseringsscan" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="upcoming-initiative-digitaliseringsscan"><span class="header-section-number">5.5</span> Upcoming Initiative: “Digitaliseringsscan”</h2>
+<p>As the next concrete step, a <strong>digital scan of the lectorate</strong> will be conducted through interviews and observations.</p>
+<section id="objectives-1" class="level3" data-number="5.5.1">
+<h3 data-number="5.5.1" class="anchored" data-anchor-id="objectives-1"><span class="header-section-number">5.5.1</span> Objectives:</h3>
+<ul>
+<li>Visit each team member to assess current workflows<br>
+</li>
+<li>Identify opportunities for AI and digital tools to assist<br>
+</li>
+<li>Deliver a practical report including:
+<ul>
+<li>Key opportunities and barriers<br>
+</li>
+<li>Suggested tools mapped to their roles<br>
+</li>
+<li>Workshop concepts or ready-to-use quick starts</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+</section>
+</section>
+<section id="preconditions-for-success" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> 📌 Preconditions for Success</h1>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mandate &amp; Management Backing</td>
+<td>Pending</td>
+</tr>
+<tr class="even">
+<td>FTE Focus Time</td>
+<td>Defined (0.6)</td>
+</tr>
+<tr class="odd">
+<td>Documentation Pipeline</td>
+<td>In progress</td>
+</tr>
+<tr class="even">
+<td>Safe Experiment Environment</td>
+<td>Operational</td>
+</tr>
+<tr class="odd">
+<td>Real Datasets &amp; Use Cases</td>
+<td>Emerging</td>
+</tr>
+<tr class="even">
+<td>Didactic Integration</td>
+<td>Started</td>
+</tr>
+<tr class="odd">
+<td>Regular Feedback Cycle</td>
+<td>To be defined</td>
+</tr>
+<tr class="even">
+<td>Stakeholder Alignment</td>
+<td>In motion</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="closing-thought" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> 💬 Closing Thought</h1>
+<blockquote class="blockquote">
+<p>“Step by step I take a breath…”</p>
+</blockquote>
+</section>
+<section id="nuttige-ai-usecases-voor-onderzoek" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> 🤖 Nuttige AI-Usecases voor Onderzoek</h1>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 51%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Usecase</th>
+<th>Beschrijving</th>
+<th>Voorbeelden van Tools</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>📚 Literatuuronderzoek automatiseren</td>
+<td>AI-gestuurde zoekmachines en samenvatters helpen sneller relevante papers en bronnen te vinden</td>
+<td>Perplexity, Elicit, Semantic Scholar</td>
+</tr>
+<tr class="even">
+<td>🎙️ Interviewvoorbereiding</td>
+<td>AI kan audio transcriberen, samenvatten en brainstormen over vragen</td>
+<td>MacWhisper, Wispr Flow, Otter.ai</td>
+</tr>
+<tr class="odd">
+<td>🧠 Brainstormen en structureren</td>
+<td>Ideeën ordenen, onderzoeksvragen formuleren en logische structuur aanbrengen</td>
+<td>ChatGPT, Claude, Notion AI</td>
+</tr>
+<tr class="even">
+<td>✍️ Schrijven en redigeren</td>
+<td>Conceptteksten genereren, herschrijven en verbeteren van zinnen</td>
+<td>ChatGPT, Claude, Grammarly</td>
+</tr>
+<tr class="odd">
+<td>🔄 Transcriptie &amp; analyse</td>
+<td>Gesproken materiaal automatisch transcriberen en thematisch ordenen</td>
+<td>MacWhisper, Whisper.cpp, Descript</td>
+</tr>
+<tr class="even">
+<td>📅 Onderzoek organiseren</td>
+<td>Automatisch afspraken inplannen, e-mails opstellen en reminders verzenden</td>
+<td>Shortwave, Motion, Reclaim AI</td>
+</tr>
+<tr class="odd">
+<td>📈 Data-analyse &amp; visualisatie</td>
+<td>Statistische patronen ontdekken, tabellen genereren, grafieken maken</td>
+<td>R (met GPT-4 assist), Python, Flowise</td>
+</tr>
+<tr class="even">
+<td>🔍 Zoekstrategie optimaliseren</td>
+<td>Slimme zoekopdrachten uitvoeren en relevante bronnen clusteren</td>
+<td>Perplexity, Research Rabbit</td>
+</tr>
+<tr class="odd">
+<td>🧾 Synthese en rapportage</td>
+<td>Samenvatten van onderzoeksresultaten tot beleidsteksten of presentaties</td>
+<td>ChatGPT, Quarto, Jasper</td>
+</tr>
+<tr class="even">
+<td>🧬 Simulaties en voorspellingen</td>
+<td>Scenario-analyse en voorspellen van trends op basis van data</td>
+<td>GPT-4 + Python, LangChain, Ollama</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p>🔧 <strong>Bonus</strong>: Combineer meerdere tools in één workflow (bijv. transcriptie → analyse → rapport) via n8n of Jupyter Notebooks.</p>
+</blockquote>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Tool</th>
+<th>Website</th>
+<th>Gratis te gebruiken</th>
+<th>Open source</th>
+<th>GitHub Link</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Perplexity AI</strong></td>
+<td><a href="https://www.perplexity.ai/">perplexity.ai</a></td>
+<td>✅ Ja</td>
+<td>❌ Nee</td>
+<td>–</td>
+</tr>
+<tr class="even">
+<td><strong>Elicit</strong></td>
+<td><a href="https://elicit.com/">elicit.com</a></td>
+<td>✅ Ja</td>
+<td>❌ Nee</td>
+<td>–</td>
+</tr>
+<tr class="odd">
+<td><strong>Semantic Scholar</strong></td>
+<td><a href="https://www.semanticscholar.org/">semanticscholar.org</a></td>
+<td>✅ Ja</td>
+<td>❌ Nee</td>
+<td>–</td>
+</tr>
+<tr class="even">
+<td><strong>Scite.ai</strong></td>
+<td><a href="https://scite.ai/">scite.ai</a></td>
+<td>✅ Ja (freemium)</td>
+<td>❌ Nee</td>
+<td>–</td>
+</tr>
+<tr class="odd">
+<td><strong>Connected Papers</strong></td>
+<td><a href="https://connectedpapers.com/">connectedpapers.com</a></td>
+<td>✅ Ja</td>
+<td>❌ Nee</td>
+<td>–</td>
+</tr>
+<tr class="even">
+<td><strong>Litmaps</strong></td>
+<td><a href="https://www.litmaps.com/">litmaps.com</a></td>
+<td>✅ Ja (freemium)</td>
+<td>❌ Nee</td>
+<td>–</td>
+</tr>
+<tr class="odd">
+<td><strong>Consensus</strong></td>
+<td><a href="https://consensus.app/">consensus.app</a></td>
+<td>✅ Ja (freemium)</td>
+<td>❌ Nee</td>
+<td>–</td>
+</tr>
+<tr class="even">
+<td><strong>ASReview</strong></td>
+<td><a href="https://asreview.nl/">asreview.nl</a></td>
+<td>✅ Ja</td>
+<td>✅ Ja</td>
+<td><a href="https://github.com/asreview/asreview">GitHub</a></td>
+</tr>
+<tr class="odd">
+<td><strong>SemOpenAlex</strong></td>
+<td><a href="https://semopenalex.org/">semopenalex.org</a></td>
+<td>✅ Ja</td>
+<td>✅ Ja</td>
+<td><a href="https://github.com/metaphacts/semopenalex">GitHub</a></td>
+</tr>
+<tr class="even">
+<td><strong>YAGO</strong></td>
+<td><a href="https://yago-knowledge.org/">yago-knowledge.org</a></td>
+<td>✅ Ja</td>
+<td>✅ Ja</td>
+<td><a href="https://github.com/yago-naga/yago3">GitHub</a></td>
+</tr>
+<tr class="odd">
+<td><strong>LLAssist</strong></td>
+<td><a href="https://arxiv.org/abs/2407.13993">arxiv.org/abs/2407.13993</a></td>
+<td>✅ Ja</td>
+<td>✅ Ja</td>
+<td><a href="https://github.com/ChristoforusY/LLAssist">GitHub</a></td>
+</tr>
+<tr class="even">
+<td><strong>LitLLM</strong></td>
+<td><a href="https://arxiv.org/abs/2402.01788">arxiv.org/abs/2402.01788</a></td>
+<td>✅ Ja</td>
+<td>✅ Ja</td>
+<td><a href="https://github.com/shubhamagarwal92/LitLLM">GitHub</a></td>
+</tr>
+<tr class="odd">
+<td><strong>CRUISE-Screening</strong></td>
+<td><a href="https://arxiv.org/abs/2309.01684">arxiv.org/abs/2309.01684</a></td>
+<td>✅ Ja</td>
+<td>✅ Ja</td>
+<td><a href="https://github.com/ProjectDoSSIER/cruise-screening">GitHub</a></td>
+</tr>
+<tr class="even">
+<td><strong>CiteSeerX</strong></td>
+<td><a href="https://citeseerx.ist.psu.edu/">citeseerx.ist.psu.edu</a></td>
+<td>✅ Ja</td>
+<td>✅ Ja</td>
+<td><a href="https://github.com/SeerLabs/SeerSuite">GitHub</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Qiqqa</strong></td>
+<td><a href="https://www.qiqqa.com/">qiqqa.com</a></td>
+<td>✅ Ja</td>
+<td>✅ Ja</td>
+<td><a href="https://github.com/jimmejardine/qiqqa-open-source">GitHub</a></td>
+</tr>
+<tr class="even">
+<td><strong>GrapAL</strong></td>
+<td><a href="https://arxiv.org/abs/1902.05170">arxiv.org/abs/1902.05170</a></td>
+<td>✅ Ja</td>
+<td>✅ Ja</td>
+<td><a href="https://github.com/allenai/grapal">GitHub</a></td>
+</tr>
+<tr class="odd">
+<td><strong>STORM</strong></td>
+<td><a href="https://en.wikipedia.org/wiki/STORM_(AI_Tool)">wikipedia.org/wiki/STORM_(AI_Tool)</a></td>
+<td>✅ Ja</td>
+<td>✅ Ja</td>
+<td><a href="https://github.com/stanford-oval/storm">GitHub</a></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Voice en Transcriptie:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Tool</th>
+<th>Website</th>
+<th>Gratis te gebruiken</th>
+<th>Open source</th>
+<th>GitHub Link</th>
+<th>Toelichting</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>MacWhisper</strong></td>
+<td><a href="https://goodsnooze.gumroad.com/l/macwhisper">goodsnooze.gumroad.com/l/macwhisper</a></td>
+<td>✅ Ja (macOS only)</td>
+<td>❌ Nee</td>
+<td>–</td>
+<td>Lokale transcriptietool voor audio-opnames met Whisper-model.</td>
+</tr>
+<tr class="even">
+<td><strong>Whisper.cpp</strong></td>
+<td><a href="https://github.com/ggerganov/whisper.cpp">github.com/ggerganov/whisper.cpp</a></td>
+<td>✅ Ja</td>
+<td>✅ Ja</td>
+<td><a href="https://github.com/ggerganov/whisper.cpp">GitHub</a></td>
+<td>Lichtgewicht C++-implementatie van Whisper, werkt offline op CPU.</td>
+</tr>
+<tr class="odd">
+<td><strong>Wispr Flow</strong></td>
+<td><a href="https://wisprflow.ai/">wisprflow.ai</a></td>
+<td>✅ Ja (freemium)</td>
+<td>❌ Nee</td>
+<td>–</td>
+<td>Tool om brainstormen via spraak te transcriberen en structureren.</td>
+</tr>
+<tr class="even">
+<td><strong>Otter.ai</strong></td>
+<td><a href="https://otter.ai/">otter.ai</a></td>
+<td>✅ Ja (freemium)</td>
+<td>❌ Nee</td>
+<td>–</td>
+<td>Online spraak-naar-tekst platform met live transcriptie &amp; samenvattingen.</td>
+</tr>
+<tr class="odd">
+<td><strong>AudioNotes</strong></td>
+<td><a href="https://audionotes.app/">audionotes.app</a></td>
+<td>✅ Ja (beperkt)</td>
+<td>❌ Nee</td>
+<td>–</td>
+<td>Spraaknotitie-app met automatische samenvattingen via AI.</td>
+</tr>
+<tr class="even">
+<td><strong>Voicenotes</strong></td>
+<td><a href="https://voicenotes.space/">voicenotes.space</a></td>
+<td>✅ Ja</td>
+<td>❌ Nee</td>
+<td>–</td>
+<td>Browsergebaseerde app voor korte AI-samenvattingen van spraak.</td>
+</tr>
+<tr class="odd">
+<td><strong>Supernormal</strong></td>
+<td><a href="https://supernormal.com/">supernormal.com</a></td>
+<td>✅ Ja (freemium)</td>
+<td>❌ Nee</td>
+<td>–</td>
+<td>Neemt meetings op, transcribeert en maakt automatisch notulen.</td>
+</tr>
+<tr class="even">
+<td><strong>Scriberr</strong></td>
+<td><a href="https://github.com/daveshap/Scriberr">GitHub</a></td>
+<td>✅ Ja</td>
+<td>✅ Ja</td>
+<td><a href="https://github.com/daveshap/Scriberr">GitHub</a></td>
+<td>Zelf-hostbare AI-transcriptie-app die Whisper-modellen gebruikt.</td>
+</tr>
+<tr class="odd">
+<td><strong>aTrain</strong></td>
+<td><a href="https://arxiv.org/abs/2310.11967">arxiv.org/abs/2310.11967</a></td>
+<td>✅ Ja</td>
+<td>✅ Ja</td>
+<td><a href="https://github.com/ArminHaberl/aTrain">GitHub</a></td>
+<td>Open-source tool voor het transcriberen van interviews met ondersteuning voor meerdere talen.</td>
+</tr>
+<tr class="even">
+<td><strong>Live Transcribe</strong></td>
+<td><a href="https://www.android.com/accessibility/live-transcribe/">android.com/accessibility/live-transcribe</a></td>
+<td>✅ Ja</td>
+<td>✅ Ja</td>
+<td><a href="https://github.com/google/live-transcribe-speech-engine">GitHub</a></td>
+<td>Real-time transcriptie-app ontwikkeld door Google voor Android.</td>
+</tr>
+<tr class="odd">
+<td><strong>Final Round AI</strong></td>
+<td><a href="https://www.finalroundai.com/">finalroundai.com</a></td>
+<td>✅ Ja</td>
+<td>❌ Nee</td>
+<td>–</td>
+<td>AI-tools om interviews te oefenen, cv’s te optimaliseren en feedback te krijgen.</td>
+</tr>
+<tr class="even">
+<td><strong>Metaview</strong></td>
+<td><a href="https://www.metaview.ai/">metaview.ai</a></td>
+<td>✅ Ja (freemium)</td>
+<td>❌ Nee</td>
+<td>–</td>
+<td>Geautomatiseerde, AI-gegenereerde notities voor recruiters en interviewers.</td>
+</tr>
+<tr class="odd">
+<td><strong>Riverside.fm</strong></td>
+<td><a href="https://riverside.fm/transcription">riverside.fm/transcription</a></td>
+<td>✅ Ja</td>
+<td>❌ Nee</td>
+<td>–</td>
+<td>AI-aangedreven transcriptieservice voor audio en video met hoge nauwkeurigheid.</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
