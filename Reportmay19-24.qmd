@@ -9,16 +9,17 @@ format:
     css: css/styles.css
     toc: true
     number-sections: true
+    include-before-body: _logo.html   # <-- shows logo in HTML
   pdf:
     documentclass: scrartcl
     toc: true
     number-sections: true
     colorlinks: true
     linkcolor: blue
+    include-before-body: _logo.tex   # <-- shows logo in PDF
 execute:
   echo: false
 ---
-
 
 # 🧭 Executive Summary
 
