@@ -6,8 +6,10 @@ This repository contains the official mini report for the development and deploy
 
 ## 🚀 View the Report
 
-- 🔗 [**View Report (HTML)**](https://value-chain-hackers.github.io/Reporting/Reportmay19-24.html)
-- 📥 [**Download PDF**](https://value-chain-hackers.github.io/Reporting/Reportmay19-24.pdf)
+## 🗓️ Weekly Reports
+
+- [2024-05-26 (HTML)](https://value-chain-hackers.github.io/Reporting/Report-2024-05-26.html) | [PDF](https://value-chain-hackers.github.io/Reporting/Report-2024-05-26.pdf)
+- [2024-05-19 (HTML)](https://value-chain-hackers.github.io/Reporting/Reportmay19-24.html) | [PDF](https://value-chain-hackers.github.io/Reporting/Reportmay19-24.pdf)
 
 ---
 
