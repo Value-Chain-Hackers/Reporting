@@ -6,8 +6,8 @@ This repository contains the official mini report for the development and deploy
 
 ## 🚀 View the Report
 
-- 🔗 [**View Report (HTML)**](https://value-chain-hackers.github.io/Reporting/report.html)
-- 📥 [**Download PDF**](https://value-chain-hackers.github.io/Reporting/report.pdf)
+- 🔗 [**View Report (HTML)**](https://value-chain-hackers.github.io/Reporting/Reportmay19-24.html)
+- 📥 [**Download PDF**](https://value-chain-hackers.github.io/Reporting/Reportmay19-24.pdf)
 
 ---
 
@@ -23,23 +23,21 @@ This repository contains the official mini report for the development and deploy
 
 ## 📁 Project Structure
 
-| File / Folder      | Purpose                                       |
-|--------------------|------------------------------------------------|
-| `report.qmd`       | Main Quarto source document                   |
-| `report.html`      | Rendered HTML report                          |
-| `report.pdf`       | Rendered PDF download                         |
-| `_logo.html`       | Injects logo for HTML version                 |
-| `_logo.tex`        | Injects logo for PDF version                  |
-| `img/`             | Contains `windesheim-logo.png`               |
-| `css/styles.css`   | Custom Windesheim styling                     |
+| File / Folder           | Purpose                                       |
+|-------------------------|-----------------------------------------------|
+| `Reportmay19-24.qmd`    | Main Quarto source document                   |
+| `Reportmay19-24.html`   | Rendered HTML report                          |
+| `Reportmay19-24.pdf`    | Rendered PDF download                         |
+| `_logo.html` / `.tex`   | Injects logo for HTML and PDF versions        |
+| `img/`                  | Contains Windesheim logo                      |
+| `css/styles.css`        | Custom theme styling                          |
 
 ---
 
 ## 🧰 Tools Used
 
 - [Quarto](https://quarto.org/) for publishing
-- [R Markdown](https://rmarkdown.rstudio.com/)
-- [TinyTeX](https://yihui.org/tinytex/) for PDF rendering
+- [TinyTeX](https://yihui.org/tinytex/) for PDF generation
 - [GitHub Pages](https://pages.github.com/) for hosting
 
 ---
@@ -48,9 +46,8 @@ This repository contains the official mini report for the development and deploy
 
 **Christiaan Verhoef**  
 *Digital Adoption Specialist @ Windesheim*  
-GitHub: [@Kamitor](https://github.com/Kamitor)
-
-📬 Contact: [christiaan_gerardo@hotmail.com](mailto:christiaan_gerardo@hotmail.com)
+GitHub: [@Kamitor](https://github.com/Kamitor)  
+📬 [christiaan_gerardo@hotmail.com](mailto:christiaan_gerardo@hotmail.com)
 
 ---
 
