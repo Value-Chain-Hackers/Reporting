@@ -1,7 +1,7 @@
 ---
 title: "Mini Report: AI Lab Infrastructure & Strategy"
 author: "Christiaan Verhoef"
-date: 2025-06-02
+date: 2025-06-01
 format:
   html:
     theme:

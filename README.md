@@ -13,6 +13,8 @@ This repository contains the official mini report for the development and deploy
 - [2025-06-02 (HTML)](https://value-chain-hackers.github.io/Reporting/Report-2025-06-02.html) | [PDF](https://value-chain-hackers.github.io/Reporting/Report-2025-06-02.pdf)
 
 
+(ONLY AGENDA)
+- [2025-06-09 (HTML)](https://value-chain-hackers.github.io/Reporting/Report-2025-06-09.html) | [PDF](https://value-chain-hackers.github.io/Reporting/Report-2025-06-09.pdf)
 
 ---
 
