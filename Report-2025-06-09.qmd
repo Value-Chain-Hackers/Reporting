@@ -21,17 +21,16 @@ execute:
   echo: false
 ---
 
-# 📅 Weekly Agenda: June 2–7
-
 ## ✅ Monday (Windesheim) — *Build + Handover*  
 Tags: `#dev` `#admin` `#infra`
 - [ ] GitHub cleanup for Maxime (start consolidation) `#infra`
+- [ ] Prompts for Mira to help the bots get more context aware.
 - [ ] Install Quarto prototype with Ronald `#dev`
 - [ ] Polish visuals for reporting PDFs `#dev`
 - [ ] Update Michiel’s reports `#admin`
 - [ ] Attend Windesheim + VCH standups `#collab`
 
----
+
 
 ## ✅ Tuesday (Windesheim) — *LLM Lab & Infra Day*  
 Tags: `#dev` `#infra` `#educ`
@@ -41,7 +40,7 @@ Tags: `#dev` `#infra` `#educ`
 - [ ] Continue GitHub cleanup (if needed) `#infra`
 - [ ] Test Beer Game setup `#educ`
 
----
+
 
 ## ⚠️ Wednesday (Pangea) — *Strategy & Planning*  
 Tags: `#admin` `#collab` `#educ`
@@ -50,26 +49,29 @@ Tags: `#admin` `#collab` `#educ`
 - [ ] Clean GPT chats + archive last week’s report `#admin`
 - [ ] Outline modular AI workshop formats `#educ`
 - [ ] Optional: test QEMU if time allows `#dev`
+- [ ] Discuss and draft financial plan with girlfriend `#life`  
+- [ ] Request new banking card `#admin`  
+- [ ] Resolve pincode issue with bank `#admin`
 
----
 
-## ✅ Thursday (Windesheim) — *Student & Collaboration*  
-Tags: `#collab` `#educ` `#infra`
-- [ ] VCH student progress meeting `#collab`
-- [ ] Meet with Fred: align curriculum `#collab` `#educ`
-- [ ] Refine use-case-based modular AI tool concepts `#educ` `#dev`
-- [ ] Finalize consolidated Obsidian workspace `#infra`
 
----
+## ✅ Tuesday (Windesheim) — *LLM Lab & Infra Day*
+Tags: `#dev` `#infra` `#educ`
+- [ ] Support Mira: test MSTY + micro-RAG setup `#dev`
+- [ ] Begin QEMU installation for replication `#dev`
+- [ ] Obsidian workspace consolidation (Windesheim-wide) `#infra`
+- [ ] Continue GitHub cleanup if needed `#infra`
+- [ ] ✅ **Test Beer Game setup** (final check before Friday) `#educ`
+
 
 ## ✅ Friday — *Documentation & Activation*  
-Tags: `#admin` `#dev` `#collab`
-- [ ] Attend Beer Game final meeting `#educ`
-- [ ] Start automation interview draft `#admin`
-- [ ] Write Ronald prototype handover notes `#admin` `#collab`
-- [ ] Publish this week’s mini-report `#admin`
+Tags: `#admin` `#educ`  
+- [ ] ✅ **Beer Game final meeting** (Process Optimization minor) `#educ`  
+- [ ] Start automation interview draft `#admin`  
+- [ ] Write Ronald prototype handover notes `#admin`  
+- [ ] Publish this week’s mini-report `#admin`  
+- [ ] Create invoice for Michiel `#admin`  
 
----
 
 ## ✅ Weekend (Sat–Sun) — *Catch-up & Cleanup*  
 Tags: `#admin` `#infra` `#educ`
