@@ -1,0 +1,359 @@
+---
+title: "Mini Report: AI Lab Infrastructure & Strategy"
+author: "Christiaan Verhoef"
+date: today
+format:
+  html:
+    theme:
+      light: flatly
+    css: css/styles.css
+    toc: true
+    number-sections: true
+    include-before-body: _logo.html   # <-- shows logo in HTML
+  pdf:
+    documentclass: scrartcl
+    toc: true
+    number-sections: true
+    colorlinks: true
+    linkcolor: blue
+    include-before-body: _logo.tex   # <-- shows logo in PDF
+execute:
+  echo: false
+---
+
+# 🗓️ Weekly Plan
+
+## ✅ Monday (Windesheim)
+- [ ] 📌 Windesheim standup  
+- [ ] 📌 VCH standup  
+- [ ] 📊 Update Michiel’s reports  
+- [ ] 🛠️ Install Quarto prototype (Ronald)  
+- [ ] 🔧 GitHub cleanup (Maxime)  
+
+---
+
+## ✅ Tuesday (Windesheim)
+- [ ] 💻 Set up QEMU virtual laptop (Mira – LLM testing)  
+- [ ] 🧪 Test Beer Game (logistics management)  
+- [ ] 🗂️ Obsidian consolidation (if time allows)
+
+---
+
+## ⚠️ Wednesday (Partial – Pangea Board)
+- [ ] 🧭 Pangea board meeting  
+- [ ] 🧠 Learn N8N (light session)  
+- [ ] 📝 Draft automation survey for Michiel (colleague interviews)  
+- [ ] 🧹 Clean GPT chats (evening)
+
+---
+
+## ✅ Thursday (Windesheim)
+- [ ] 🧑‍🏫 Catch up with Fred (semester planning)  
+- [ ] 👥 VCH student progress meeting  
+- [ ] 🔁 Finalize Beer Game prep  
+- [ ] 🗂️ Review Obsidian workspace
+
+---
+
+## ✅ Friday (Work-focused)
+- [ ] 🍺 Beer Game meeting  
+- [ ] 🧃 Start automation interview draft  
+- [ ] 🔧 GitHub cleanup (Value Chain Hackers) *(if not done Monday)*  
+- [ ] 🗣️ Communication updates to colleagues
+
+---
+
+## ✅ Saturday (Personal)
+- [ ] 💳 Fix banking pincode  
+- [ ] 🧠 Learn Quarto dashboarding  
+- [ ] 📚 Practice data-cleaning workflows
+
+---
+
+## ✅ Sunday (Personal)
+- [ ] 💳 Order new banking card  
+- [ ] 🤝 Plan with girlfriend (3 days pay discussion)  
+- [ ] 📝 Finalize and format automation survey  
+- [ ] 🧹 Catch up on GPT/admin cleanup
+
+
+
+# 🧭 Executive Summary
+
+This mini report outlines the formalized scope and direction of AI and digital adoption efforts at Windesheim, coordinated by Christiaan Verhoef. It reflects recent strategic conversations with Michiel Steeman and Harrold van den Nieuwboer, and integrates operational updates such as AI stack deployments, dashboard development, and the launch of a lectorate-wide digitization scan.
+
+### Weekly Commitment & Roles
+
+- **1 day/week – VCH (Value Chain Hackers)**  
+  As *Technisch Facilitator AI & Data*: Maintain and expand local AI stack, support data and tooling infrastructure.
+
+- **2 days/week – Lectoraat-wide**  
+  As *Digital Adoption Specialist*: Guide colleagues in the effective use of AI and ICT tools to enhance education and research.
+
+### Objectives
+
+- Enable scalable, secure, and local-first AI usage
+- Provide reproducible tools and templates for staff and students
+- Make technology a **lever**, not a **barrier**
+- Facilitate—not impose—AI use, aligned with actual needs
+
+### Key Initiatives Underway
+
+- ✅ **AI Workbook & Infrastructure**: Deployment of tools like OpenWebUI, pgvector, n8n  
+- ✅ **Field Implementation**: Lightweight stack (MSTY) deployed with students  
+- ✅ **BI Dashboard (Ronald)**: Live survey analytics pipeline on GitHub Pages  
+- 🔜 **Beergame Revival**: Preparing for re-integration into the minor Process Optimization  
+- 🔜 **Digitaliseringsscan**: Lectorate-wide interviews and tool matching to map opportunities & bottlenecks
+
+This effort positions Windesheim to lead in practical AI adoption, grounded in day-to-day educator workflows, and backed by accessible open-source infrastructure.
+
+
+---
+
+# 🔍 Identified Problems
+
+- **No clear guidelines**  
+  Students and researchers use AI tools, but lack responsible instructions or use-cases.
+
+- **Oversold tools and hype**  
+  Many tools are in a "hype" phase and are not realistically applicable yet.
+
+- **Lack of ownership**  
+  No single point of coordination across departments for practical AI integration.
+
+- **Fragmented infrastructure**  
+  Tools, datasets, and environments are scattered or impractical to use (e.g., Azure, CoPilot).
+
+> “AI is not good or bad — it depends on what people do with it.”
+
+---
+
+# ✅ Solutions in Progress
+
+## 1. Practical Guidelines
+
+- Creation of an **AI Workbook**, expanding:
+  - [mlr3book](https://mlr3book.mlr-org.com/)
+  - The Big Prompt Library
+  - [fast.ai course](https://course.fast.ai/)
+- Distributed under a **CC BY-NC-SA 4.0 license**
+
+## 2. Ownership & Autonomy
+
+- Safe, GDPR-compliant environments for experimentation
+- Locally integrated AI stack:  
+  `OpenWebUI + Supabase + Qdrant + pgvector + n8n`
+
+## 3. Shared Infrastructure
+
+- Public repositories:
+  - [VCH-Infra](https://github.com/Value-Chain-Hackers/VCH-Infra)
+  - [VCH-Datasharing](https://github.com/Value-Chain-Hackers/VCH-Datasharing)
+- Student usage: prompt testing, data exploration, document analysis
+
+---
+
+# 🔧 What Works Already
+
+- **Obsidian Integration** with local LLMs for semantic search
+- **Workshops held** on prompt engineering and local AI use
+- **Use cases** tested: ESG reporting, data pipelines, Jupyter-based model interaction
+- **Templates** being developed for reproducible AI projects
+
+---
+
+# ✍️ Field Notes
+
+## Mira – Local Deployment Case
+
+Mira attempted to run the full AI stack on her machine, but it was limited by hardware:
+
+- **Specs**: 8GB RAM with ~6.7GB already in use
+- **Outcome**: Full stack was impractical
+
+### Solution: Pivot to MSTY (Minimal Stack Toolkit for You)
+
+- ✅ Small local models ran successfully  
+- ✅ Prompt workflows loaded and usable  
+- ✅ Performance stable for experimentation
+
+### Takeaway
+
+MSTY proves valuable for underpowered machines and increases accessibility to AI tools across students.
+
+---
+
+## Beer Game – Curriculum Integration
+
+Spoke with **Harrold van den Nieuwboer** about reviving the Beer Game as part of the *Process Optimization* minor.
+
+- Michiel is aware of the project from earlier implementation
+- Harrold raised it again during Ruud Wijlhuizen’s farewell
+- Goal: **structural integration** in the minor
+
+### Repository  
+[blockchain-demonstrator-serious-game](https://github.com/Hogeschool-Windesheim/blockchain-demonstrator-serious-game)
+
+### Outcome
+
+- Meeting planned in **2 weeks**
+- Christiaan will try to **reactivate and test** the game instance before then
+
+### Participants
+
+- Harrold van den Nieuwboer  
+- Christiaan Verhoef  
+- Maxime Bouillon  
+- +3 additional team members
+
+---
+
+## BI Dashboard – Ronald & Digital Team Study
+
+Over the weekend, work progressed on setting up an **automated dashboard** for Ronald de Boer, supporting the ongoing **survey data workflow** for the Windesheim team.
+
+### Goals
+
+- Provide Ronald with an easy-to-update interface for survey insights
+- Demonstrate how automation and reporting can **digitally augment team operations**
+- Contribute to the **ongoing study** into digital tooling for lecturers and coordinators
+
+### Progress
+
+- Deployed prototype dashboard at:  
+  🔗 [value-chain-hackers.github.io/Bi-Ronald](https://value-chain-hackers.github.io/Bi-Ronald/)
+- Quarto + GitHub Pages used for live publication
+- R-based pipeline with future hooks for Supabase and n8n integration
+
+### Relevance
+
+This effort aligns directly with:
+- The goal of **digitizing lecturer workflows**
+- Demonstrating **low-cost automation** in practice
+- Building a practical case for scalable, repeatable tech in the lectorate
+
+---
+
+
+## 🧩 Formalized Role & Next Steps
+
+Following internal discussions, the following **working agreement** has been established:
+
+### 1 day/week – Value Chain Hackers  
+**Role**: *Technisch Facilitator AI & Data*  
+**Focus**: Infrastructure & Enablement  
+- Maintain and expand the local AI stack  
+- Make tools like OpenWebUI, pgvector, etc. available  
+- Enable dashboarding, data access, and GPT integrations  
+- Assist in AI application development and research methodology adoption  
+
+### 2 days/week – Lectorate-wide Support  
+**Role**: *Digital Adoption Specialist*  
+**Focus**: Empowering staff with AI & digital tools  
+- Support colleagues in AI integration and use of ICT tools  
+- Help with:
+  - Faster interview analysis  
+  - Dashboard/report generation  
+  - Classroom AI applications  
+  - Research support  
+  - Co-creation of lesson content, formats, and examples  
+
+### Underlying Goal
+
+> “Not to invent things for them, but to facilitate.”  
+> “To help them achieve more with less effort.”  
+> “To ensure that technology becomes a lever, not a barrier.”
+
+---
+
+## Upcoming Initiative: “Digitaliseringsscan”
+
+As the next concrete step, a **digital scan of the lectorate** will be conducted through interviews and observations.
+
+### Objectives:
+- Visit each team member to assess current workflows  
+- Identify opportunities for AI and digital tools to assist  
+- Deliver a practical report including:
+  - Key opportunities and barriers  
+  - Suggested tools mapped to their roles  
+  - Workshop concepts or ready-to-use quick starts  
+
+
+---
+
+# 📌 Preconditions for Success
+
+| Item                                | Status       |
+|-------------------------------------|--------------|
+| Mandate & Management Backing        | Pending      |
+| FTE Focus Time                      | Defined (0.6)|
+| Documentation Pipeline              | In progress  |
+| Safe Experiment Environment         | Operational  |
+| Real Datasets & Use Cases           | Emerging     |
+| Didactic Integration                | Started      |
+| Regular Feedback Cycle              | To be defined|
+| Stakeholder Alignment               | In motion    |
+
+---
+
+# 💬 Closing Thought
+
+> “Step by step I take a breath...”
+
+
+
+# 🤖 Nuttige AI-Usecases voor Onderzoek
+
+| Usecase                         | Beschrijving                                                                 | Voorbeelden van Tools                |
+|----------------------------------|-----------------------------------------------------------------------------|--------------------------------------|
+| 📚 Literatuuronderzoek automatiseren | AI-gestuurde zoekmachines en samenvatters helpen sneller relevante papers en bronnen te vinden | Perplexity, Elicit, Semantic Scholar |
+| 🎙️ Interviewvoorbereiding       | AI kan audio transcriberen, samenvatten en brainstormen over vragen         | MacWhisper, Wispr Flow, Otter.ai     |
+| 🧠 Brainstormen en structureren  | Ideeën ordenen, onderzoeksvragen formuleren en logische structuur aanbrengen | ChatGPT, Claude, Notion AI           |
+| ✍️ Schrijven en redigeren       | Conceptteksten genereren, herschrijven en verbeteren van zinnen             | ChatGPT, Claude, Grammarly            |
+| 🔄 Transcriptie & analyse        | Gesproken materiaal automatisch transcriberen en thematisch ordenen         | MacWhisper, Whisper.cpp, Descript     |
+| 📅 Onderzoek organiseren         | Automatisch afspraken inplannen, e-mails opstellen en reminders verzenden   | Shortwave, Motion, Reclaim AI        |
+| 📈 Data-analyse & visualisatie  | Statistische patronen ontdekken, tabellen genereren, grafieken maken        | R (met GPT-4 assist), Python, Flowise |
+| 🔍 Zoekstrategie optimaliseren  | Slimme zoekopdrachten uitvoeren en relevante bronnen clusteren              | Perplexity, Research Rabbit           |
+| 🧾 Synthese en rapportage       | Samenvatten van onderzoeksresultaten tot beleidsteksten of presentaties     | ChatGPT, Quarto, Jasper               |
+| 🧬 Simulaties en voorspellingen | Scenario-analyse en voorspellen van trends op basis van data                | GPT-4 + Python, LangChain, Ollama     |
+
+> 🔧 **Bonus**: Combineer meerdere tools in één workflow (bijv. transcriptie → analyse → rapport) via n8n of Jupyter Notebooks.
+
+| Tool                 | Website                                                                               | Gratis te gebruiken | Open source | GitHub Link                                                  |
+| -------------------- | ------------------------------------------------------------------------------------- | ------------------- | ----------- | ------------------------------------------------------------ |
+| **Perplexity AI**    | [perplexity.ai](https://www.perplexity.ai/)                                           | ✅ Ja                | ❌ Nee       | –                                                            |
+| **Elicit**           | [elicit.com](https://elicit.com/)                                                     | ✅ Ja                | ❌ Nee       | –                                                            |
+| **Semantic Scholar** | [semanticscholar.org](https://www.semanticscholar.org/)                               | ✅ Ja                | ❌ Nee       | –                                                            |
+| **Scite.ai**         | [scite.ai](https://scite.ai/)                                                         | ✅ Ja (freemium)     | ❌ Nee       | –                                                            |
+| **Connected Papers** | [connectedpapers.com](https://connectedpapers.com/)                                   | ✅ Ja                | ❌ Nee       | –                                                            |
+| **Litmaps**          | [litmaps.com](https://www.litmaps.com/)                                               | ✅ Ja (freemium)     | ❌ Nee       | –                                                            |
+| **Consensus**        | [consensus.app](https://consensus.app/)                                               | ✅ Ja (freemium)     | ❌ Nee       | –                                                            |
+| **ASReview**         | [asreview.nl](https://asreview.nl/)                                                   | ✅ Ja                | ✅ Ja        | [GitHub](https://github.com/asreview/asreview)               |
+| **SemOpenAlex**      | [semopenalex.org](https://semopenalex.org/)                                           | ✅ Ja                | ✅ Ja        | [GitHub](https://github.com/metaphacts/semopenalex)          |
+| **YAGO**             | [yago-knowledge.org](https://yago-knowledge.org/)                                     | ✅ Ja                | ✅ Ja        | [GitHub](https://github.com/yago-naga/yago3)                 |
+| **LLAssist**         | [arxiv.org/abs/2407.13993](https://arxiv.org/abs/2407.13993)                          | ✅ Ja                | ✅ Ja        | [GitHub](https://github.com/ChristoforusY/LLAssist)          |
+| **LitLLM**           | [arxiv.org/abs/2402.01788](https://arxiv.org/abs/2402.01788)                          | ✅ Ja                | ✅ Ja        | [GitHub](https://github.com/shubhamagarwal92/LitLLM)         |
+| **CRUISE-Screening** | [arxiv.org/abs/2309.01684](https://arxiv.org/abs/2309.01684)                          | ✅ Ja                | ✅ Ja        | [GitHub](https://github.com/ProjectDoSSIER/cruise-screening) |
+| **CiteSeerX**        | [citeseerx.ist.psu.edu](https://citeseerx.ist.psu.edu/)                               | ✅ Ja                | ✅ Ja        | [GitHub](https://github.com/SeerLabs/SeerSuite)              |
+| **Qiqqa**            | [qiqqa.com](https://www.qiqqa.com/)                                                   | ✅ Ja                | ✅ Ja        | [GitHub](https://github.com/jimmejardine/qiqqa-open-source)  |
+| **GrapAL**           | [arxiv.org/abs/1902.05170](https://arxiv.org/abs/1902.05170)                          | ✅ Ja                | ✅ Ja        | [GitHub](https://github.com/allenai/grapal)                  |
+| **STORM**            | [wikipedia.org/wiki/STORM_(AI_Tool)](https://en.wikipedia.org/wiki/STORM_\(AI_Tool\)) | ✅ Ja                | ✅ Ja        | [GitHub](https://github.com/stanford-oval/storm)             |
+|                      |                                                                                       |                     |             |                                                              |
+Voice en Transcriptie:
+
+| Tool                | Website                                                                                             | Gratis te gebruiken | Open source | GitHub Link                                                       | Toelichting                                                                                   |
+| ------------------- | --------------------------------------------------------------------------------------------------- | ------------------- | ----------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| **MacWhisper**      | [goodsnooze.gumroad.com/l/macwhisper](https://goodsnooze.gumroad.com/l/macwhisper)                  | ✅ Ja (macOS only)   | ❌ Nee       | –                                                                 | Lokale transcriptietool voor audio-opnames met Whisper-model.                                 |
+| **Whisper.cpp**     | [github.com/ggerganov/whisper.cpp](https://github.com/ggerganov/whisper.cpp)                        | ✅ Ja                | ✅ Ja        | [GitHub](https://github.com/ggerganov/whisper.cpp)                | Lichtgewicht C++-implementatie van Whisper, werkt offline op CPU.                             |
+| **Wispr Flow**      | [wisprflow.ai](https://wisprflow.ai/)                                                               | ✅ Ja (freemium)     | ❌ Nee       | –                                                                 | Tool om brainstormen via spraak te transcriberen en structureren.                             |
+| **Otter.ai**        | [otter.ai](https://otter.ai/)                                                                       | ✅ Ja (freemium)     | ❌ Nee       | –                                                                 | Online spraak-naar-tekst platform met live transcriptie & samenvattingen.                     |
+| **AudioNotes**      | [audionotes.app](https://audionotes.app/)                                                           | ✅ Ja (beperkt)      | ❌ Nee       | –                                                                 | Spraaknotitie-app met automatische samenvattingen via AI.                                     |
+| **Voicenotes**      | [voicenotes.space](https://voicenotes.space/)                                                       | ✅ Ja                | ❌ Nee       | –                                                                 | Browsergebaseerde app voor korte AI-samenvattingen van spraak.                                |
+| **Supernormal**     | [supernormal.com](https://supernormal.com/)                                                         | ✅ Ja (freemium)     | ❌ Nee       | –                                                                 | Neemt meetings op, transcribeert en maakt automatisch notulen.                                |
+| **Scriberr**        | [GitHub](https://github.com/daveshap/Scriberr)                                                      | ✅ Ja                | ✅ Ja        | [GitHub](https://github.com/daveshap/Scriberr)                    | Zelf-hostbare AI-transcriptie-app die Whisper-modellen gebruikt.                              |
+| **aTrain**          | [arxiv.org/abs/2310.11967](https://arxiv.org/abs/2310.11967)                                        | ✅ Ja                | ✅ Ja        | [GitHub](https://github.com/ArminHaberl/aTrain)                   | Open-source tool voor het transcriberen van interviews met ondersteuning voor meerdere talen. |
+| **Live Transcribe** | [android.com/accessibility/live-transcribe](https://www.android.com/accessibility/live-transcribe/) | ✅ Ja                | ✅ Ja        | [GitHub](https://github.com/google/live-transcribe-speech-engine) | Real-time transcriptie-app ontwikkeld door Google voor Android.                               |
+| **Final Round AI**  | [finalroundai.com](https://www.finalroundai.com/)                                                   | ✅ Ja                | ❌ Nee       | –                                                                 | AI-tools om interviews te oefenen, cv's te optimaliseren en feedback te krijgen.              |
+| **Metaview**        | [metaview.ai](https://www.metaview.ai/)                                                             | ✅ Ja (freemium)     | ❌ Nee       | –                                                                 | Geautomatiseerde, AI-gegenereerde notities voor recruiters en interviewers.                   |
+| **Riverside.fm**    | [riverside.fm/transcription](https://riverside.fm/transcription)                                    | ✅ Ja                | ❌ Nee       | –                                                                 | AI-aangedreven transcriptieservice voor audio en video met hoge nauwkeurigheid.               |
+
