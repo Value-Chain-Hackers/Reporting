@@ -220,10 +220,22 @@ Together, these activities advanced all four core objectives of the AI Lab initi
 Tags: `#dev` `#admin` `#infra`  
 - [ ] GitHub cleanup for Maxime (start consolidation) `#infra`  
 - [ ] Prompts for Mira to help the bots get more context `#dev`  
-- [ ] Install Quarto prototype with Ronald `#dev`  
+- [!] Install Quarto prototype with Ronald `#dev`  
 - [ ] Polish visuals for reporting PDFs `#dev`  
-- [ ] Update Michiel’s reports `#admin`  
-- [ ] Attend Windesheim + VCH standups `#collab`  
+- [x] Update Michiel’s reports `#admin`  
+- [x] Attend Windesheim + VCH standups `#collab`  
+- [x] Arkin Lesson Plan : Lesson 4: coding 4 kids 
+- [ ] Figure out how to start a Windows machine with Qemu to test possibilities. 
+Additional tasks
+- [ ] Make a form ( template for the students to fill in to make a quick summary of their work)  for Maxime and VCH so that the students can automatically give us the nessesairy information.
+- [ ] Adjust the matrix (grading forms for the presentation day) for grading of the students so that the judges can more easily grade: Not a full Syllebus.
+- [ ] Fill in the matrix (the excel with the contacts of the unis (doesn't have to happen today) of windesheim with potentials for students and outreach. 
+- [ ] make regulation slide for VCH slide deck (doesn't have to happen today)
+ 
+Tried reaching out to Ronald, but he's "full until tuesday".
+Made appointment with monique to help increase her research > Upcoming Thursday
+Wrote Email to Mira for possible next steps: 
+
 
 ## ✅ Tuesday (Windesheim) — *LLM Lab & Infra Day*  
 Tags: `#dev` `#infra` `#educ`  

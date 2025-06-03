@@ -24,23 +24,42 @@ execute:
 
 ## ✅ Monday (Windesheim) — *Build + Handover*  
 Tags: `#dev` `#admin` `#infra`  
-- [ ] GitHub cleanup for Maxime (start consolidation) `#infra`  
-- [ ] Prompts for Mira to help the bots get more context `#dev`  
-- [ ] Install Quarto prototype with Ronald `#dev`  
-- [ ] Polish visuals for reporting PDFs `#dev`  
-- [ ] Update Michiel’s reports `#admin`  
-- [ ] Attend Windesheim + VCH standups `#collab`  
+- [!] GitHub cleanup for Maxime (start consolidation) `#infra`  
+- [!] Install Quarto prototype with Ronald `#dev`  
+- [x] Update Michiel’s reports `#admin`  
+- [x] Attend Windesheim + VCH standups `#collab`  
+- [x] Arkin Lesson Plan : Lesson 4: coding 4 kids 
+- [x] Make a form ( template for the students to fill in to make a quick summary of their work)  for Maxime and VCH so that the students can automatically give us the nessesairy information.
+- [x] Adjust the matrix (grading forms for the presentation day) for grading of the students so that the judges can more easily grade: Not a full Syllebus.
+- [X] Give feedback on the overall presentation of Maxime : https://liveadminwindesheim.sharepoint.com/:p:/r/sites/O365-LectoraatSupplyChainFinance/_layouts/15/Doc.aspx?sourcedoc=%7B7840195F-62CB-4C2A-A0AF-02187D136132%7D&file=pitch%20deck%20VCH%20A25.pptx&nav=eyJzSWQiOjM1NywiY0lkIjozNjE4Mjk4NzAyLCJjb21tZW50SWQiOiI0MkNDMDQzOC1CRjczLTQyNDItODQ1RS1BN0QyN0E2OUYyMEEifQ&action=edit&mobileredirect=true
+- [ ] Fill in the matrix (the excel with the contacts of the unis (doesn't have to happen today) of windesheim with potentials for students and outreach. 
+- [X] make regulation slide for VCH slide deck (doesn't have to happen today)
+- [x] Process Feedback on the Form. 
+
+Tried reaching out to Ronald, but he's "full until tuesday".
+Made appointment with monique to help increase her research > Upcoming Thursday
+Wrote Email to Mira for possible next steps: 
+
 
 ## ✅ Tuesday (Windesheim) — *LLM Lab & Infra Day*  
 Tags: `#dev` `#infra` `#educ`  
-- [ ] Support Mira: test MSTY + micro-RAG setup `#dev`  
-- [ ] Begin QEMU installation for replication `#dev`  
+- [x] Process Feedback on the Form.
+- [x] Report Progress to Maxime
+- [ ] Begin QEMU installation for replication `#dev`
+- [ ] Figure out how to start a Windows machine with Qemu to test possibilities. 
+- [ ] Polish visuals for reporting PDFs `#dev`  
+- [ ] Install Quarto prototype with Ronald `#dev`  
 - [ ] Obsidian workspace consolidation (Windesheim-wide) `#infra`  
 - [ ] Continue GitHub cleanup if needed `#infra`  
 - [ ] ✅ **Test Beer Game setup** (final check before Friday) `#educ`  
 
 ## ⚠️ Wednesday (Pangea) — *Strategy & Planning*  
 Tags: `#admin` `#collab` `#educ`  
+- [ ] Do Standup with Koen Schouten. 
+- [ ] Support Mira: test MSTY + micro-RAG setup `#dev`  
+- [ ] Check out https://cookiecutter-data-science.drivendata.org/#with-pip
+- [ ] Install Data-scientist on Linux Laptop
+- [ ] Prompts for Mira to help the bots get more context `#dev`  
 - [ ] Attend Pangea board meeting `#collab`  
 - [ ] Draft automation support survey (Michiel) `#admin`  
 - [ ] Clean GPT chats + archive last week’s report `#admin`  
@@ -56,6 +75,7 @@ Tags: `#admin` `#life`
 ## ✅ Thursday — *Student & Infra Support*  
 Tags: `#educ` `#infra` `#collab`  
 - [ ] VCH student progress meeting `#educ`  
+- [ ] Made appointment with monique to help increase her research > Upcoming Thursday
 - [ ] Catch up with Fred re: semester planning `#collab`  
 - [ ] Continue infrastructure setup (GitLab + services) `#infra`  
 
