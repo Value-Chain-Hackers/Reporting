@@ -39,32 +39,79 @@ Tags: `#dev` `#admin` `#infra`
 Tried reaching out to Ronald, but he's "full until tuesday".
 Made appointment with monique to help increase her research > Upcoming Thursday
 Wrote Email to Mira for possible next steps: 
+Asked mira to meet, but she could not, moved to wednesday. 
+
+Koen:
+- 1 Solicitatie eruit gestuurd: 
+
+- Clan hulp ? Downloadbaar maken van een nieuwsbrief
+- Go geleerd
+- Metrode? Interview Training website; Technisch interview plat gegaan.
+- Overdracht mogelijk mis gegaan: CV
+- Huishouden; boodschappen, sporten (Klas Strenght; Sportschool).
+
+- Go gaat uitdagend worden. 
+
+
 
 
 ## ✅ Tuesday (Windesheim) — *LLM Lab & Infra Day*  
 Tags: `#dev` `#infra` `#educ`  
 - [x] Process Feedback on the Form.
 - [x] Report Progress to Maxime
-- [ ] Begin QEMU installation for replication `#dev`
-- [ ] Figure out how to start a Windows machine with Qemu to test possibilities. 
+- [!] Begin QEMU installation for replication `#dev`
+- [!] Figure out how to start a Windows machine with Qemu to test possibilities. 
 - [ ] Polish visuals for reporting PDFs `#dev`  
-- [ ] Install Quarto prototype with Ronald `#dev`  
+- [!] Install Quarto prototype with Ronald `#dev`  
 - [ ] Obsidian workspace consolidation (Windesheim-wide) `#infra`  
 - [ ] Continue GitHub cleanup if needed `#infra`  
-- [ ] ✅ **Test Beer Game setup** (final check before Friday) `#educ`  
+- [x] ✅ **Test Beer Game setup** (final check before Friday) `#educ`  
+
+-- Failure on the Automatic install of Ronald: Due to no testing possibilities
+-- Failure on Qemo Due to Running on AMD hardware.
+-- Switching to VMware to try it that way.
+-- Tried installing with Ronald manually: not enough time will continue with him tomorrow; 
+-- continued building the automatic script
+-- Succesfully installed VMware and running windows 10 at full speed
+-- installed guest additions to Windows so I can copy paste easy
+-- Installed ubuntu in VMware so I can test the beergame
+-- Met with Fred van Toor to discuss his new program for upcoming september, he wants to do more finance forcasting.
+-- after 15+ code pushes, managed to succesfully run the install script on the windows machine.
+-- Wrote script to automatically install and run the beergame in Ubuntu. 
+
+Code editor voor learning: ZED: Code editor die hij prettig is. 
+
+Gezondheid:
+Hulpmiddel om tegen iemand te sparren zodat ik geen mens hoef te storen. 
 
 ## ⚠️ Wednesday (Pangea) — *Strategy & Planning*  
 Tags: `#admin` `#collab` `#educ`  
-- [ ] Do Standup with Koen Schouten. 
-- [ ] Support Mira: test MSTY + micro-RAG setup `#dev`  
+- [X] Do Standup with Koen Schouten. 
+- [!] Support Mira: test MSTY + micro-RAG setup `#dev`  
 - [ ] Check out https://cookiecutter-data-science.drivendata.org/#with-pip
 - [ ] Install Data-scientist on Linux Laptop
-- [ ] Prompts for Mira to help the bots get more context `#dev`  
-- [ ] Attend Pangea board meeting `#collab`  
+- [x] Attend Pangea board meeting `#collab`  
 - [ ] Draft automation support survey (Michiel) `#admin`  
 - [ ] Clean GPT chats + archive last week’s report `#admin`  
-- [ ] Outline modular AI workshop formats `#educ`  
-- [ ] Optional: test QEMU if time allows `#dev`  
+- [x] Outline modular AI workshop formats `#educ`  
+
+-> Perplexity laten zien aan mira
+-> vervolg traject voorgesteld aan mira;
+-> 1 uur lang call met mira;
+-> VM updated;
+
+KOEN: 
+- Sporten gedaan; Met Nieuwsbrief verder: Go meer begrepen, Frontend Backend; 
+- Brief naar werkgever gestuurd; gemist op vakantie gegaan; 
+
+
+- Assesment opdracht maken, en kleine huishoudelijk dingentjes;
+- Ilse komt langs en kantoordag;  
+
+
+voelt als belangrijk terwijl het niet moeilijk is. 
+
+
 
 ### ✅ Wednesday Evening — *Personal Time*  
 Tags: `#admin` `#life`  
@@ -75,9 +122,18 @@ Tags: `#admin` `#life`
 ## ✅ Thursday — *Student & Infra Support*  
 Tags: `#educ` `#infra` `#collab`  
 - [ ] VCH student progress meeting `#educ`  
-- [ ] Made appointment with monique to help increase her research > Upcoming Thursday
-- [ ] Catch up with Fred re: semester planning `#collab`  
+- [x] Made appointment with monique to help increase her research > Upcoming Thursday
+- [x] monique juypters botbooks
+- [ ] Verder met rapportages.
+- [ ] Beergame bespreken. 
 - [ ] Continue infrastructure setup (GitLab + services) `#infra`  
+
+- Created report and Website for project monique;
+- Mailed after monique
+- transcripted and uploaded meeting from monique;
+- accedentally deleted the VM clone from windows that was ready.
+- Getting VM into Ready state again..
+
 
 ## ✅ Friday — *Documentation & Activation*  
 Tags: `#admin` `#educ`  
