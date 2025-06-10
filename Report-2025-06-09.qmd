@@ -89,7 +89,7 @@ Tags: `#admin` `#collab` `#educ`
 - [X] Do Standup with Koen Schouten. 
 - [!] Support Mira: test MSTY + micro-RAG setup `#dev`  
 - [ ] Check out https://cookiecutter-data-science.drivendata.org/#with-pip
-- [ ] Install Data-scientist on Linux Laptop
+- [!] Install Data-scientist on Linux Laptop
 - [x] Attend Pangea board meeting `#collab`  
 - [ ] Draft automation support survey (Michiel) `#admin`  
 - [ ] Clean GPT chats + archive last week’s report `#admin`  
@@ -99,6 +99,8 @@ Tags: `#admin` `#collab` `#educ`
 -> vervolg traject voorgesteld aan mira;
 -> 1 uur lang call met mira;
 -> VM updated;
+-> Don't install Data-scientist on laptop, Do it in the VM instead!
+
 
 KOEN: 
 - Sporten gedaan; Met Nieuwsbrief verder: Go meer begrepen, Frontend Backend; 
@@ -125,14 +127,16 @@ Tags: `#educ` `#infra` `#collab`
 - [x] Made appointment with monique to help increase her research > Upcoming Thursday
 - [x] monique juypters botbooks
 - [ ] Verder met rapportages.
-- [ ] Beergame bespreken. 
+- [x] Beergame bespreken. 
+- [x] Tonomy Emergency Board meeting: > Strategy Direction. 
 - [ ] Continue infrastructure setup (GitLab + services) `#infra`  
-
+- [x] Tried to fix beergame (emergency)
 - Created report and Website for project monique;
 - Mailed after monique
 - transcripted and uploaded meeting from monique;
 - accedentally deleted the VM clone from windows that was ready.
 - Getting VM into Ready state again..
+- Success VM in ready state
 
 
 ## ✅ Friday — *Documentation & Activation*  
