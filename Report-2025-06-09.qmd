@@ -123,10 +123,10 @@ Tags: `#admin` `#life`
 
 ## ✅ Thursday — *Student & Infra Support*  
 Tags: `#educ` `#infra` `#collab`  
-- [ ] VCH student progress meeting `#educ`  
+- [X] VCH student progress meeting `#educ`  
 - [x] Made appointment with monique to help increase her research > Upcoming Thursday
 - [x] monique juypters botbooks
-- [ ] Verder met rapportages.
+- [ ] Verder met rapportages voor Ronald (BLOCKED DEPLOYMENT)
 - [x] Beergame bespreken. 
 - [x] Tonomy Emergency Board meeting: > Strategy Direction. 
 - [ ] Continue infrastructure setup (GitLab + services) `#infra`  
@@ -138,14 +138,30 @@ Tags: `#educ` `#infra` `#collab`
 - Getting VM into Ready state again..
 - Success VM in ready state
 
+Koen:
+- UWV met werkzoekhulp: Boos op stigmatiserende informatie.
+- Dag verloren met boos zijn.
+- MediaMedia Assesment; 
+- no blockers
+- update plan voor de server A.I (grappig genoeg had ik hem net gisteren nodig oh oh chris toch)
+- ISO Checklist 
+- Hosting beergame Procedure
+- Pitch maken voor bedrijf
+
+
 
 ## ✅ Friday — *Documentation & Activation*  
 Tags: `#admin` `#educ`  
-- [ ] ✅ **Beer Game final meeting** (Process Optimization minor) `#educ`  
+- [x] ✅ **Beer Game final meeting** (Process Optimization minor) `#educ`  
 - [ ] Start automation interview draft `#admin`  
-- [ ] Write Ronald prototype handover notes `#admin`  
-- [ ] Publish this week’s mini-report `#admin`  
-- [ ] Create invoice for Michiel `#admin`  
+- [!] Write Ronald prototype handover notes `#admin`  
+- [!] Publish this week’s mini-report `#admin`  
+- [ ] Create invoice for Michiel `#admin` 
+- [ ] Continue deployment script voor Ronald. 
+
+- Had conversation with Jellenek
+- Had "discussions" with Kirsten.
+- Spend the rest of the day in agony. 
 
 ## ✅ Weekend (Sat–Sun) — *Catch-up & Cleanup*  
 Tags: `#admin` `#infra` `#educ`  
@@ -154,3 +170,48 @@ Tags: `#admin` `#infra` `#educ`
 - [ ] Complete GPT chat cleanup & server backups `#admin` `#infra`  
 - [ ] Write GitLab deployment playbook `#infra`  
 - [ ] Rest + reflect ☕️  
+
+- went out with kirsten to make sure she was happy.
+- Negotiated that I would have at least monday to work so I can catch up with work. 
+
+- What do I want?
+I want to sleep;
+I want to rest;
+I want to not have to do something. I don't want to feel I am lacking
+
+## Monday
+Officially a vacation day, so I can hopefully do some work.
+
+- [x] Do Hours.
+- [x] Transfer Bank account 
+- [x] Fix bugs in the Ronald project
+- [x] Have meeting with Johan
+- [ ] Do the factuur for michiel
+- [ ] make presentation for Research Ready
+Made first presentation for Research Ready
+Turned out a bit longer than expected, even though A.I Was there
+Johan pointed out that Theory-U is likely to not yield any results, maybe good idea to.
+made VM ready
+Need to fix some bugs before 11
+talked with getty for plan Mira, short LLM's.
+Feedback gegeven aan Jack zijn concept. 
+
+
+Koen : 
+
+- Progress gemaakt met een test gemaakt maar kost veel tijd.
+Dacht een dag, duurt altijd langer dan je denkt.
+- Werken aan react; 
+- Andere solicitatie sturen.
+
+
+- [ ] Ronald Project
+
+ -- Check Code install first time
+ -- add the CSV to it
+ -- Test application
+
+
+- [ ] Do the factuur for michiel
+- [ ] zitten met monique
+- [ ] zitten met de studenten
